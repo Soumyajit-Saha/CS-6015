@@ -17,19 +17,17 @@ for i in range(int(r)):
 random.shuffle(pop)
 val=2500
 
-for k in range(500):
-    c=0
-    for i in range(100):
-        sample_ind=random.sample(range(0,10000000),val)
-        sample=[]
-        for j in sample_ind:
-            sample.append(pop[j])
-        maj=sample.count(1)
-        if maj>0.5*val:
-            c+=1
-    ans=c/100
-    # print(ans)
-    if ans<0.9:
-        print('NO', ans)
-        break
+
+c=0
+for i in range(100):
+    sample_ind=random.sample(range(0,10000000),val)
+    sample=[]
+    for j in sample_ind:
+        sample.append(pop[j])
+    maj=sample.count(1)
+    if maj>0.5*val:
+        c+=1
+ans=c/100
+print(ans)
+
         
