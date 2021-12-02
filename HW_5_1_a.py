@@ -7,15 +7,15 @@ Created on Thu Nov 18 20:58:12 2021
 import random
 
 pop=[0]*10000000
-a=0.55
-b=0.45
+a=0.52
+b=0.48
 
 r=a*10000000
 for i in range(int(r)):
     pop[i]=1
 
 random.shuffle(pop)
-val=1000
+val=400
 
 samples=[int(val*1.1**i) for i in range(100)]
 
@@ -27,7 +27,7 @@ for k in samples:
         for j in sample_ind:
             sample.append(pop[j])
         maj=sample.count(1)
-        if maj>0.5*val:
+        if maj>0.5*k:
             c+=1
     ans=c/100
     # print(ans)
